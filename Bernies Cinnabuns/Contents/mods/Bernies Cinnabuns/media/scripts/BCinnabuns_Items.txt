@@ -1,0 +1,76 @@
+module BCinnabuns {
+	imports 
+	{
+		Base
+	}
+	
+	item BCinnabunMix
+	{
+		DisplayName = Cinnabun Mix,
+		DisplayCategory = Food,
+		Type = Normal,
+		Weight = 0.1,
+		Icon = BCinnabunMix,
+		Packaged = TRUE,
+		StaticModel = BCinnabunMix,
+		WorldStaticModel = BCinnabunMix_Ground,
+	}
+	
+	item BCinnabun
+	{
+		DisplayName = Cinnabun,
+		DisplayCategory = Food,
+		Type = Food,
+		Weight = 0.1,
+		Icon = BCinnabun,
+		DaysFresh = 30,
+		DaysTotallyRotten = 40,
+		HungerChange = -10,
+		UnhappyChange = -15,
+		Calories = 180,
+		Carbohydrates = 10.45,
+		Lipids = 12.61,
+		Proteins = 14.53,
+		StaticModel = BCinnabun,
+		WorldStaticModel = BCinnabun_Ground,
+	}
+	
+	item BCinnabunBatter
+	{
+		DisplayName = Cinnabun batter,
+		DisplayCategory = Food,
+		Type = Food,
+		Weight = 0.2,
+		Icon = BCinnabunBatter,
+		DaysFresh = 4,
+		DaysTotallyRotten = 9,
+		HungerChange = -15,
+		UnhappyChange = -10,
+		Calories = 560,
+		Carbohydrates = 9,
+		Lipids = 53,
+		Proteins = 10,
+		StaticModel = BCinnabunBatter,
+		WorldStaticModel = BCinnabunBatter_Ground,
+		Tags = HasMetal,
+	}
+	
+	item BRawCinnabuns
+	{
+		DisplayName = Cinnabuns on Tray,
+		DisplayCategory = Food,
+		Type = Food,
+		Weight = 0.1,
+		Icon = BRawCinnabuns,
+		DaysFresh = 4,
+		DaysTotallyRotten = 9,
+		BadInMicrowave = true,
+		IsCookable = TRUE,
+		ReplaceOnUse = BakingTray,
+		MinutesToCook = 40,
+		MinutesToBurn = 110,
+		StaticModel = BRawCinnabuns,
+		WorldStaticModel = BRawCinnabuns_Ground,
+		Tags = HasMetal,
+	}
+}

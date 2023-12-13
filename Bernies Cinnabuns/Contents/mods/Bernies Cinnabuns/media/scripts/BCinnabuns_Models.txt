@@ -1,0 +1,30 @@
+module BDriedMeatsModels {
+	imports 
+	{
+		Base
+	}
+	model BCinnabunMix_Ground
+	{
+		mesh = WorldItems/PancakeMix,
+		texture = WorldItems/BCinnabunMix_Ground,
+		scale = 0.4,
+	}
+	model BCinnabun_Ground
+	{
+		mesh = WorldItems/CinnamonRoll,
+		texture = WorldItems/BCinnabun_Ground,
+		scale = 0.3,
+	}
+	model BCinnabunBatter_Ground
+	{
+		mesh = WorldItems/CakeBatter,
+		texture = WorldItems/BCinnabunBatter_Ground,
+		scale = 0.4,
+	}
+	model BRawCinnabuns_Ground
+	{
+		mesh = WorldItems/BakingTray_Cookies,
+		texture = WorldItems/BRawCinnabuns_Ground,
+		scale = 0.4,
+	}
+}

@@ -1,0 +1,42 @@
+module Base
+{
+	recipe Make Cinnabun Batter
+	{
+		keep Spatula/[Recipe.GetItemTypes.Spoon]/[Recipe.GetItemTypes.Fork],
+		Bowl,
+		[Recipe.GetItemTypes.Egg]=1,
+		BCinnabunMix,
+		[Recipe.GetItemTypes.Milk];5,
+		SkillRequired:Cooking=2,
+
+		Result:BCinnabunBatter,
+		Time:120.0,
+		Category:Cooking,
+		OnGiveXP:Recipe.OnGiveXP.Cooking3
+	}
+	
+	recipe Place Cinnabun Batter on Baking Tray
+    {
+       BCinnabunBatter,
+       BakingTray,
+
+       Result:BRawCinnabuns,
+       OnCreate:Recipe.OnCreate.PutCakeBatterInBakingPan,
+       Time:120.0,
+       Category:Cooking,
+       OnGiveXP:Recipe.OnGiveXP.Cooking3,
+    }
+	
+	recipe Take Cinnabuns from Baking Tray  
+	{
+	    BRawCinnabuns,
+ 
+	    Result:BakingTray,
+		OnCreate:Recipe.OnCreate.TakeCinnabunsFromTray,
+	    Time:10.0,
+	    Category:Cooking,
+		Sound:EmptyPan,
+        OnGiveXP:Recipe.OnGiveXP.Cooking10,
+		OnCanPerform:Recipe.OnCanPerform.TakeCinnabunsFromTray,
+    }
+}
